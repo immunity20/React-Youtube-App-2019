@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
+import { YOUTUBE_API_KEY } from './APIKEYS';
 import Search from './components/Search';
 import VideoList from './components/VideoList';
 import VideoDetails from './components/VideoDetails';
@@ -14,7 +15,7 @@ function App() {
       params: {
         part: 'snippet',
         maxResults: 6,
-        key: 'AIzaSyBHZbNn446urpez7wHvjQIfYo9iVxa_yAc',
+        key: YOUTUBE_API_KEY,
         q: search,
       },
     });
