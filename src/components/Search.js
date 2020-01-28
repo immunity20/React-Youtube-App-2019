@@ -24,25 +24,32 @@ const classes = {
   height: 28px;
   margin: 4px;
   `,
-}
+};
 
-const Search = (props) => {
-    const [text, setText] = useState('');
-    return (
-      <Paper component="form" className={classes.root}>
+const Search = ({ handleSubmit }) => {
+  const [text, setText] = useState('');
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    if (text > 2);
+    handleSubmit(text);
+  };
+
+  return (
+    <Paper component="form" className={classes.root} onSubmit={handleOnSubmit}>
       <InputBase
         className={classes.input}
         placeholder="Search Youtube"
         inputProps={{ 'aria-label': 'search youtube videos' }}
         value={text || ''}
-        onChange={(e) => setText(e.target.value)}
+        onChange={e => setText(e.target.value)}
       />
-        <Divider className={classes.divider} orientation="vertical" />
+      <Divider className={classes.divider} orientation="vertical" />
       <IconButton type="submit" className={classes.iconButton} aria-label="search">
         <SearchIcon />
       </IconButton>
     </Paper>
-    );
+  );
 };
 
 export default Search;

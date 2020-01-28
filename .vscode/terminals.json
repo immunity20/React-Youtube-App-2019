@@ -1,0 +1,17 @@
+{
+  "autorun": true,
+  "terminals": [
+    {
+      "name": "Bash - Just a terminal",
+      "focus": true  
+    },
+    {
+      "name": "React Server",
+      "description": "runs npm start in the react-ui directory",
+      "focus": false,
+      "commands": [
+        "npm run start"
+      ]    
+    }
+  ]
+}
